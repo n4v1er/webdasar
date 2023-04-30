@@ -63,3 +63,11 @@ div a {
 div a:hover {
     color:red;
 }
+
+.daftar li {
+    display: inline;
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+    color:black;
+}
