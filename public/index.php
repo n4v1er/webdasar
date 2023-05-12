@@ -9,15 +9,21 @@
     <link rel="stylesheet" href="./font/bootstrap-icons.css">
 </head>
 <body>
-<div class="col-lg-6 col-xxl-4 my-5 mx-auto">
-    <div id="main" class="d-grid gap-2">
-
+<div class="col-lg-12 col-xxl-11 my-5 mx-auto">
+    <h1>Daftar Data Diri Mahaiswa</h1>
+    </br>
+    <div class="col align-self-end">
+        <a class="btn btn-small btn-success" href="./tambah.php"><i class="bi bi-clipboard-plus"></i></i> Tambah</a>
+    </div>
+    <div id="main" class="d-grid">
+        
         <?php 
             // menyematkan modul koneksi database.
             require_once "./conn.php"; 
 
             $sql = "SELECT * FROM `data_diri`";
         ?>
+        
         <table class="table table-striped">
             <thead>
             <tr>
@@ -48,7 +54,8 @@
                 <td><?php echo $row['tpt_lahir'] ?></td>
                 <td><?php echo $row['tgl_lahir'] ?></td>
                 <td><?php echo $row['alamat'] ?></td>
-                <td></td>
+                <td><a class="btn btn-small btn-warning" href="./edit.php"><i class="bi bi-pencil-square"></i> Ubah</a> | 
+                    <a class="btn btn-small btn-danger" href="./hapus.php"><i class="bi bi-trash"></i> Hapus</a></td>
             </tr>
         <?php
                 }
